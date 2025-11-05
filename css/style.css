@@ -1,13 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-body{
+body {
     font-family: "Rubik", sans-serif;
     margin: 0;
-    background: #616161;
-    background: linear-gradient(90deg, rgba(97, 97, 97, 1) 0%, rgba(64, 64, 64, 1) 52%, rgba(84, 80, 80, 1) 100%);
+    background-color: #616161;
+    background-color: linear-gradient(90deg, rgba(97, 97, 97, 1) 0%, rgba(64, 64, 64, 1) 52%, rgba(84, 80, 80, 1) 100%);
 }
 
-.flex{
+.flex {
     display: flex;
     flex-direction: row;
+}
+
+.flex aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 30%;
+    gap: 5%;
+    margin: 5%;
+}
+.carre {
+  width: 100%; /* ou une largeur spécifique */
+  aspect-ratio: 1 / 1; /* cela garantit un rapport 1:1, donc un carré */
+}
+
+.app {
+    width: 40%;
+    height: auto;
+    padding: 2%;
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+.app img{
+    width: 100%;
+    height: auto;
+}
+.app p{
+    margin: 0;
+}
+.block {
+    margin: auto;
+    width: 70%;
+    height: auto;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.app:hover{
+    background-color: rgba(255, 255, 255, 0.1);
 }
