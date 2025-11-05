@@ -7,32 +7,54 @@ body {
     background-color: linear-gradient(90deg, rgba(97, 97, 97, 1) 0%, rgba(64, 64, 64, 1) 52%, rgba(84, 80, 80, 1) 100%);
 }
 
+header{
+    display: inline;
+    height: 100px;
+}
+header {
+    display: flex;
+    background-color: #E0C097;
+    width: 80%;
+    margin: 40px auto;
+    padding: 10px 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px; /* arrondis */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* ombre douce */
+}
+
+#photo_profil{
+    width: 8%;
+}
+
 .flex {
     display: flex;
     flex-direction: row;
 }
 
 .flex aside {
+    height: 450px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 30%;
-    gap: 5%;
+    gap: 2% 5%;
     margin: 5%;
 }
 .carre {
-  width: 100%; /* ou une largeur spécifique */
-  aspect-ratio: 1 / 1; /* cela garantit un rapport 1:1, donc un carré */
+  aspect-ratio: 20 1; /* cela garantit un rapport 1:1, donc un carré */
 }
 
 .app {
-    width: 40%;
+    width: 15vmin;  /* Utilisation de vmin pour la largeur et la hauteur */
+    height: 15vmin; /* Assurez-vous que la hauteur et la largeur sont égales */
     height: auto;
     padding: 2%;
     color: white;
     text-align: center;
     user-select: none;
 }
+
 .app img{
     width: 100%;
     height: auto;
