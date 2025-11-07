@@ -6,57 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="module" href="script.js">
+    <script src="script.js" defer></script>
     <link rel="icon" href="./images/verre.png" type="image/png">
 </head>
 
 <body>
-    <header>
-        <img id="photo_profil" src="img/icone_profil.png" alt="icone de profil">
+    <header> <img id="photo_profil" src="img/icone_profil.png" alt="icone de profil">
         <p>Lucas COELHO | Étudiant à JUNIA Bordeaux </p>
     </header>
     <main>
         <section class="flex"> <!--presque tout le site est la dedans-->
             <aside> <!-- chacunes des "applis" est dans sa-->
-                <div class="app carre" id="mailtouchable"> <!-- et la on fait chacunes d'entres elles séparément dans des div comme sa -->
+                <div class="app carre" id="mailtouchable">
                     <div class="block" id="mail">
                         <img src="img/icone_mail.webp" alt="icone de profil">
                     </div>
-                    <p>Mes coordonées</p>
+                    <p>Mes coordonnées</p>
                 </div>
-                <div class="app carre" id="autretouchable"> <!-- et la on fait chacunes d'entres elles séparément dans des div comme sa -->
-                    <div class="block">
-                        <img src="img/icone_profil.png" alt="icone de profil">
+
+                <div class="app carre" id="truc2label">
+                    <div class="block" id="mail">
+                        <img src="img/icone_mail.webp" alt="icone de profil">
                     </div>
-                    <p>En savoir plus sur moi</p>
+                    <p>Autre truc</p>
                 </div>
-                <div class="app carre"> <!-- et la on fait chacunes d'entres elles séparément dans des div comme sa -->
-                    <div class="block">
-                        <img src="img/icone_profil.png" alt="icone de profil">
+
+                <div class="app carre" id="mailtouchable">
+                    <div class="block" id="mail">
+                        <img src="img/icone_mail.webp" alt="icone de profil">
                     </div>
-                    <p>En savoir plus sur moi</p>
+                    <p>Mes coordonnées</p>
                 </div>
-                <div class="app carre"> <!-- et la on fait chacunes d'entres elles séparément dans des div comme sa -->
-                    <div class="block">
-                        <img src="img/icone_profil.png" alt="icone de profil">
+
+                <div class="app carre" id="mailtouchable">
+                    <div class="block" id="mail">
+                        <img src="img/icone_mail.webp" alt="icone de profil">
                     </div>
-                    <p>En savoir plus sur moi</p>
-                </div>
+                    <p>Mes coordonnées</p>
                 </div>
             </aside>
             <section id="affichage" class="relative"> <!--position relative pour que les absolue ait un référentiel-->
-                    <div class="bouton bouton1">
+                <div class="style_affichage animate_off" id="mailAffichage"> <!--pour les contacts-->
+                    <div class="bulle_interieure">
                         <p>Bonjour</p>
                     </div>
-                    <div class="bouton bouton2">
-                        <p>bonsoir</p>
-                    </div>
-                </section>
+                </div>
+            </section>
         </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer> </footer>
 </body>
 
 </html>

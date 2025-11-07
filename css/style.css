@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
-    --height_aff: 430px;
+    --height_aff: 440px;
     --gris_bg: #616161;
+    --bulle: #32888f;
+    --bulle_outline: #2d7a80;
     font-family: "Rubik", sans-serif;
     margin: 0;
     background-color: var(--gris_bg);
+}
+
+body {
+    animation: fondu_noir 0.5s ease forwards;
 }
 
 header {
@@ -29,11 +35,13 @@ header {
 
 #photo_profil {
     width: 8%;
+    border-radius: 15%;
 }
 
 .flex {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .flex aside {
@@ -91,11 +99,13 @@ header {
     background: radial-gradient(circle, var(--gris_bg) 0%, var(--couleur_affichage) 30%, var(--couleur_affichage2) 60%, var(--couleur_affichage) 100%);*/
     background-color: var(--couleur_affichage);
     box-shadow: 0px 0px 21px 6px var(--couleur_affichage);
-    margin: 20px auto;
+    margin: 20px 10%;
     width: 50%;
     height: var(--height_aff);
     border-radius: 10%;
     border: 5px var(--couleur_affichage) solid;
+    z-index: 1;
+    color: white;
 }
 
 .relative {
@@ -106,26 +116,105 @@ header {
     width: 80%;
 }
 
-.bouton {
-    background-color: red;
+.style_affichage {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
     width: 94%;
     height: 94%;
     margin: 3%;
+    z-index: 2;
 }
+
+.bulle_interieure {
+    background-color: var(--bulle);
+    border: var(--bulle_outline) solid 3px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 21px 6px var(--bulle_outline);
+}
+
 
 /*********************************************animations********************************************************/
 
 @keyframes opacite0 {
+    0% {
+        opacity: 0;
+    }
+
     100% {
         opacity: 0;
     }
 }
 
-/*******************************************boutons**************************************/
-#mailtouchable:active+#autretouchable {
-    animation: opacite0 0.1s ease forwards;
-    animation-fill-mode: forwards ;
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes turn_on {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes turn_off {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.4;
+    }
+}
+
+@keyframes fondu_noir {
+    0% {
+        background-color: black;
+        opacity: 0;
+        scale: 0;
+    }
+
+    20% {
+        scale: 0
+    }
+
+    40% {
+        opacity: 0;
+        ;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: var(--gris_bg);
+        scale: 1;
+    }
+}
+
+.animate-pop {
+    animation: pop 0.2s ease-in-out forwards;
+}
+
+.animate_on {
+    animation: turn_on 0.5s ease-out forwards;
+}
+
+.animate_off {
+    animation: turn_off 0.2s ease-in forwards;
 }
