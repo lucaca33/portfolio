@@ -5,6 +5,7 @@ body {
     --gris_bg: #616161;
     --bulle: #32888f;
     --bulle_outline: #2d7a80;
+    --bg_vert: #3af80a65;
     font-family: "Rubik", sans-serif;
     margin: 0;
     background-color: var(--gris_bg);
@@ -56,7 +57,8 @@ header {
 
 .carre {
     aspect-ratio: 20 1;
-    /* cela garantit un rapport 1:1, donc un carré */
+    /* cela garantit un rapport 1:1 */
+    border-radius: 10%;
 }
 
 .app {
@@ -118,10 +120,13 @@ header {
 
 .style_affichage {
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
     top: -10px;
     left: 0;
-    width: 94%;
-    height: 94%;
     margin: 3%;
     z-index: 2;
 }
@@ -132,7 +137,9 @@ header {
     border-radius: 30px;
     box-shadow: 0px 0px 21px 6px var(--bulle_outline);
 }
-
+.bulle_texte{
+    padding: 0 10px;
+}
 
 /*********************************************animations********************************************************/
 

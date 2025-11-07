@@ -3,10 +3,12 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const b1 = document.getElementById('mailtouchable');
-const b2 = document.getElementById('bouton2');
+const b2 = document.getElementById('TEST_BOUTTON2');
 const b3 = document.getElementById('bouton3');
 const b4 = document.getElementById('bouton4');
+const liste_button = [b1, b2, b3, b4];
 
+const af0 = document.getElementById('message_start'); // le message qui s'affiche quand on regarde rien
 const af1 = document.getElementById('mailAffichage');
 
 function animate(to_animate) {
@@ -23,27 +25,33 @@ function animate(to_animate) {
     return 0;
 }
 
+function button_updt(button) {
+    button_pop(button);
+}
+function button_pop(button) {
+    button.classList.remove('animate-pop'); // si déjà animée
+    void button.offsetWidth; // "reset" l’animation
+    button.classList.add('animate-pop');
+    return 0;
+}
+
 b1.addEventListener('click', () => {
-    b1.classList.remove('animate-pop'); // si déjà animée
-    void b1.offsetWidth; // "reset" l’animation
-    b1.classList.add('animate-pop');
+    button_updt(b1);
     animate(af1);
-})/*
+    animate(af0);
+})
 b2.addEventListener('click', () => {
-    b2.classList.remove('animate-pop'); // si déjà animée
-    void b2.offsetWidth; // "reset" l’animation
-    b2.classList.add('animate-pop');
+    button_updt(b2);
     animate(af1);
+    animate(af0);
 })
 b3.addEventListener('click', () => {
-    b3.classList.remove('animate-pop'); // si déjà animée
-    void b3.offsetWidth; // "reset" l’animation
-    b3.classList.add('animate-pop');
+    button_updt(b3);
     animate(af1);
+    animate(af0);
 })
 b4.addEventListener('click', () => {
-    b4.classList.remove('animate-pop'); // si déjà animée
-    void b4.offsetWidth; // "reset" l’animation
-    b4.classList.add('animate-pop');
+    button_updt(b4);
     animate(af1);
-})*/
+    animate(af0);
+})
