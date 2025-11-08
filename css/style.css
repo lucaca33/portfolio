@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
     --height_aff: 440px;
     --gris_bg: #616161;
     --bulle: #32888f;
     --bulle_outline: #2d7a80;
+    --bule_vert: #31852e;
+    --bule_vert_outline: #2c7729;
     --bg_vert: #3af80a65;
     font-family: "Rubik", sans-serif;
     margin: 0;
@@ -34,8 +37,14 @@ header {
     /* ombre douce */
 }
 
+#portfolio {
+    font-size: xx-large;
+    font-family: "Pacifico", cursive;
+}
+
 #photo_profil {
     width: 8%;
+    max-width: 100px;
     border-radius: 15%;
 }
 
@@ -122,13 +131,14 @@ header {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 10px;
     top: -10px;
     left: 0;
     margin: 3%;
     z-index: 2;
+    width: 94%;
 }
 
 .bulle_interieure {
@@ -137,8 +147,63 @@ header {
     border-radius: 30px;
     box-shadow: 0px 0px 21px 6px var(--bulle_outline);
 }
-.bulle_texte{
+
+.bulle_texte {
     padding: 0 10px;
+}
+.bulle_vert{
+    background-color: var(--bule_vert);
+    border-color: var(--bule_vert_outline);
+    box-shadow: 0px 0px 21px 6px var(--bule_vert_outline);
+}
+
+#mailAffichage{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 94%;
+}
+
+#langues{
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 90%;
+}
+#langues_vivantes{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:end;
+}
+.load{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+#langues_codage{
+    justify-content: center;
+    align-items: center;
+}
+.exemple_langues{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70px;
+    height: 70px;
+}
+.image_code{
+    width: 70%;
+}
+.image_code_grand{
+    width: 100%;
+}
+#les_langues_de_code{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 500px;
 }
 
 /*********************************************animations********************************************************/

@@ -3,24 +3,39 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const b1 = document.getElementById('mailtouchable');
-const b2 = document.getElementById('TEST_BOUTTON2');
+const b2 = document.getElementById('bouton2');
 const b3 = document.getElementById('bouton3');
 const b4 = document.getElementById('bouton4');
 const liste_button = [b1, b2, b3, b4];
 
 const af0 = document.getElementById('message_start'); // le message qui s'affiche quand on regarde rien
 const af1 = document.getElementById('mailAffichage');
+const af2 = document.getElementById('langues');
+const af3 = document.getElementById('mailAffichage');
+const af4 = document.getElementById('mailAffichage');
+const liste_affichage = [af0, af1, af2, af3, af4]
 
 function animate(to_animate) {
-    if (to_animate.classList.contains('animate_on')) {
+    if (to_animate.classList.contains('animate_on')) { // Si celui que l'on a cliqué est allumé, on l'éteint et on allume af0
         void to_animate.offsetWidth;
         to_animate.classList.add('animate_off')
         to_animate.classList.remove('animate_on')
-    }
-    else {
-        void to_animate.offsetWidth;
-        to_animate.classList.add('animate_on');
-        to_animate.classList.remove('animate_off');
+        void af0.offsetWidth;
+        af0.classList.add('animate_on');
+        af0.classList.remove('animate_off');
+    } else { // Sinon : on éteint tout les autres et on allume celui la
+        // bug ici quelque part
+        for (let i = 0; i < liste_affichage.length; i++) {
+            if (liste_affichage[i] == to_animate) { // si c'est le bon on l'allume
+                void liste_affichage[i].offsetWidth;
+                liste_affichage[i].classList.add('animate_on');
+                liste_affichage[i].classList.remove('animate_off');
+            } else { // sinon on l'éteint
+                void liste_affichage[i].offsetWidth;
+                liste_affichage[i].classList.add('animate_off')
+                liste_affichage[i].classList.remove('animate_on')
+            }
+        }
     }
     return 0;
 }
@@ -38,20 +53,16 @@ function button_pop(button) {
 b1.addEventListener('click', () => {
     button_updt(b1);
     animate(af1);
-    animate(af0);
 })
 b2.addEventListener('click', () => {
     button_updt(b2);
-    animate(af1);
-    animate(af0);
+    animate(af2);
 })
 b3.addEventListener('click', () => {
     button_updt(b3);
     animate(af1);
-    animate(af0);
 })
 b4.addEventListener('click', () => {
     button_updt(b4);
     animate(af1);
-    animate(af0);
 })
