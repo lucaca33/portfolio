@@ -3,12 +3,17 @@
 
 body {
     --height_aff: 440px;
-    --gris_bg: #616161;
+    --gris_bg: #6b6b6b;
+    --gris_bg2: #535353;
     --bulle: #32888f;
     --bulle_outline: #2d7a80;
     --bule_vert: #31852e;
     --bule_vert_outline: #2c7729;
     --bg_vert: #3af80a65;
+    --orange: #d3a76e;
+    --orange2: #ad8652;
+    --rose:#c77bc3;
+    --rose2:#aa69a7;
     font-family: "Rubik", sans-serif;
     margin: 0;
     background-color: var(--gris_bg);
@@ -25,7 +30,7 @@ header {
 
 header {
     display: flex;
-    background-color: #E0C097;
+    background-color: var(--orange);
     width: 80%;
     margin: 20px auto;
     padding: 10px 20px;
@@ -66,17 +71,16 @@ header {
 }
 
 .carre {
-    aspect-ratio: 20 1;
-    /* cela garantit un rapport 1:1 */
     border-radius: 10%;
 }
 
 .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 15vmin;
     /* Utilisation de vmin pour la largeur et la hauteur */
-    height: 15vmin;
-    /* Assurez-vous que la hauteur et la largeur sont égales */
-    height: auto;
+    height: 18vmin;
     padding: 2%;
     color: white;
     text-align: center;
@@ -93,11 +97,9 @@ header {
 }
 
 .block {
-    margin: auto;
+    margin: 10px    ;
     width: 70%;
     height: auto;
-    border-radius: 100%;
-    overflow: hidden;
 }
 
 .app:hover {
@@ -157,7 +159,21 @@ header {
     border-color: var(--bule_vert_outline);
     box-shadow: 0px 0px 21px 6px var(--bule_vert_outline);
 }
-
+.bulle_orange{
+    background-color: var(--orange);
+    border-color: var(--orange2);
+    box-shadow: 0px 0px 21px 6px var(--orange2);
+}
+.bulle_rose{
+    background-color: var(--rose);
+    border-color: var(--rose2);
+    box-shadow: 0px 0px 21px 6px var(--rose2);
+}
+.bulle_grise{
+    background-color: var(--gris_bg);
+    border-color: var(--gris_bg2);
+    box-shadow: 0px 0px 21px 6px var(--gris_bg2);
+}
 #mailAffichage{
     display: flex;
     flex-direction: column;
