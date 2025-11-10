@@ -12,8 +12,11 @@ body {
     --bg_vert: #3af80a65;
     --orange: #d3a76e;
     --orange2: #ad8652;
-    --rose:#c77bc3;
-    --rose2:#aa69a7;
+    --rose: #c77bc3;
+    --rose2: #aa69a7;
+    --couleur_separateur_1: #e6646475;
+    --couleur_separateur_2: #9198e575;
+    --couleur_separateur_3: #91e5b775;
     font-family: "Rubik", sans-serif;
     margin: 0;
     background-color: var(--gris_bg);
@@ -22,6 +25,7 @@ body {
 body {
     animation: fondu_noir 0.5s ease forwards;
 }
+
 header {
     display: inline;
     height: 100px;
@@ -36,9 +40,9 @@ header {
     justify-content: space-around;
     align-items: center;
     border-radius: 20px;
-    /* arrondis */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* ombre douce */
+    border: 3px solid var(--orange);
+    /* couleur de départ */
+    box-shadow: 0 0 20px var(--orange);
 }
 
 #portfolio {
@@ -96,13 +100,13 @@ header {
 }
 
 .block {
-    margin: 10px    ;
+    margin: 10px;
     width: 70%;
     height: auto;
 }
 
 .app:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    animation: truc_machin_anim_couleur_de_fou 4s linear infinite;
 }
 
 #affichage {
@@ -153,54 +157,63 @@ header {
 .bulle_texte {
     padding: 0 10px;
 }
-.bulle_vert{
+
+.bulle_vert {
     background-color: var(--bule_vert);
     border-color: var(--bule_vert_outline);
     box-shadow: 0px 0px 21px 6px var(--bule_vert_outline);
 }
-.bulle_orange{
+
+.bulle_orange {
     background-color: var(--orange);
     border-color: var(--orange2);
     box-shadow: 0px 0px 21px 6px var(--orange2);
 }
-.bulle_rose{
+
+.bulle_rose {
     background-color: var(--rose);
     border-color: var(--rose2);
     box-shadow: 0px 0px 21px 6px var(--rose2);
 }
-.bulle_grise{
+
+.bulle_grise {
     background-color: var(--gris_bg);
     border-color: var(--gris_bg2);
     box-shadow: 0px 0px 21px 6px var(--gris_bg2);
 }
-#mailAffichage{
+
+#mailAffichage {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 94%;
 }
 
-#langues{
+#langues {
     flex-direction: row;
     flex-wrap: wrap;
     height: 90%;
 }
-#langues_vivantes{
+
+#langues_vivantes {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    align-items:end;
+    align-items: end;
 }
-.load{
+
+.load {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-#langues_codage{
+
+#langues_codage {
     justify-content: center;
     align-items: center;
 }
-.exemple_langues{
+
+.exemple_langues {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,13 +221,16 @@ header {
     width: 70px;
     height: 70px;
 }
-.image_code{
+
+.image_code {
     width: 70%;
 }
-.image_code_grand{
+
+.image_code_grand {
     width: 100%;
 }
-#les_langues_de_code{
+
+#les_langues_de_code {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -222,7 +238,108 @@ header {
     width: 500px;
 }
 
+#piano {
+    display: flex;
+    position: relative;
+    width: 45%;
+    height: calc(var(--height_aff)*0.94/2);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.bulle_piano {
+    position: relative;
+    width: 90%;
+    height: 90%;
+}
+
+#piano_screen_1 {
+    overflow: hidden;
+    width: 50%;
+    left: 0px;
+    background-color: red;
+}
+
+#piano_screen_2 {
+    overflow: hidden;
+    right: 0px;
+    background-color: blue;
+}
+
+#projects {
+    height: 50%;
+}
+
+.piano {
+    display: flex;
+    width: 100%;
+    height: calc(var(--height_aff)*0.94/2);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image_piano {
+    height: 100%;
+    width: auto;
+}
+
+#image_piano_2 {
+    translate: -25%;
+}
+
+#separateur {
+    width: 10px;
+    background-color: black;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(var(--couleur_separateur_1), var(--couleur_separateur_2), var(--couleur_separateur_3));
+    background-size: 300% 300%;
+    /*sinon on voit pas le truc bouger et sa sert a rien*/
+    animation: bouge_background 3.5s infinite;
+}
+
 /*********************************************animations********************************************************/
+@keyframes bouge_background {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+@keyframes truc_machin_anim_couleur_de_fou {
+    0% {
+        border-color: var(--couleur_separateur_1);
+        box-shadow: 0 0 20px var(--couleur_separateur_1);
+        background-color: var(--couleur_separateur_1);
+    }
+
+    33% {
+        border-color: var(--couleur_separateur_2);
+        box-shadow: 0 0 20px var(--couleur_separateur_2);
+        background-color: var(--couleur_separateur_2);
+    }
+
+    66% {
+        border-color: var(--couleur_separateur_3);
+        box-shadow: 0 0 20px var(--couleur_separateur_3);
+        background-color: var(--couleur_separateur_3);
+    }
+
+    100% {
+        border-color: var(--couleur_separateur_1);
+        box-shadow: 0 0 20px var(--couleur_separateur_1);
+    }
+}
 
 @keyframes opacite0 {
     0% {
@@ -296,7 +413,8 @@ header {
 }
 
 .animate-pop {
-    animation: pop 0.2s ease-in-out forwards;
+    animation: pop 0.2s ease-in-out forwards !important; /*!important --> comme sa le :hover override pas l'anim pop*/
+
 }
 
 .animate_on {

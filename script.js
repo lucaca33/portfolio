@@ -11,7 +11,7 @@ const liste_button = [b1, b2, b3, b4];
 const af0 = document.getElementById('message_start'); // le message qui s'affiche quand on regarde rien
 const af1 = document.getElementById('mailAffichage');
 const af2 = document.getElementById('langues');
-const af3 = document.getElementById('mailAffichage');
+const af3 = document.getElementById('projets');
 const af4 = document.getElementById('mailAffichage');
 const liste_affichage = [af0, af1, af2, af3, af4]
 
@@ -44,9 +44,10 @@ function button_updt(button) {
     button_pop(button);
 }
 function button_pop(button) {
-    button.classList.remove('animate-pop'); // si déjà animée
-    void button.offsetWidth; // "reset" l’animation
+    button.classList.remove('animate-pop'); // reset animation
+    void button.offsetWidth; // force le reflow pour la rejouer
     button.classList.add('animate-pop');
+    setTimeout(() => button.classList.remove('animate-pop'), 300);
     return 0;
 }
 
@@ -60,9 +61,9 @@ b2.addEventListener('click', () => {
 })
 b3.addEventListener('click', () => {
     button_updt(b3);
-    animate(af1);
+    animate(af3);
 })
 b4.addEventListener('click', () => {
     button_updt(b4);
-    animate(af1);
+    animate(af4);
 })
