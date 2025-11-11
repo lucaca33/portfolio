@@ -2,16 +2,16 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("fade-in");
 });
 
-const b1 = document.getElementById('mailtouchable');
+const b1 = document.getElementById('bouton1');
 const b2 = document.getElementById('bouton2');
 const b3 = document.getElementById('bouton3');
 const b4 = document.getElementById('bouton4');
 const liste_button = [b1, b2, b3, b4];
 
 const af0 = document.getElementById('message_start'); // le message qui s'affiche quand on regarde rien
-const af1 = document.getElementById('mailAffichage');
-const af2 = document.getElementById('langues');
-const af3 = document.getElementById('projets');
+const af1 = document.getElementById('langues');
+const af2 = document.getElementById('projets');
+const af3 = document.getElementById('a_propos');
 const af4 = document.getElementById('mailAffichage');
 const liste_affichage = [af0, af1, af2, af3, af4]
 

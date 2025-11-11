@@ -19,30 +19,30 @@
     <main>
         <section class="flex"> <!--presque tout le site est la dedans-->
             <aside> <!-- chacunes des "applis" est dans sa-->
-                <div class="app carre" id="bouton2">
+                <div class="app carre" id="bouton1">
                     <div class="block mail">
-                        <img src="img/icones_langues.svg" alt="icone de profil">
+                        <img src="img/icones_langues.svg" alt="icone de profil" draggable="false">
                     </div>
                     <p>Langues</p>
                 </div>
 
-                <div class="app carre" id="bouton3">
+                <div class="app carre" id="bouton2">
                     <div class="block mail">
-                        <img src="img/icone_projets.svg" alt="icone de profil">
-                    </div> 
-                    <p>Projets</p> 
+                        <img src="img/icone_projets.svg" alt="icone de profil" draggable="false">
+                    </div>
+                    <p>Projets</p>
                 </div>
 
-                <div class="app carre" id="bouton4">
+                <div class="app carre" id="bouton3">
                     <div class="block mail">
-                        <img src="img/apropos_icone.svg" alt="icone de profil">
+                        <img src="img/apropos_icone.svg" alt="icone de profil" draggable="false">
                     </div>
                     <p>A propos de moi</p>
                 </div>
 
-                <div class="app carre" id="mailtouchable">
+                <div class="app carre" id="bouton4">
                     <div class="block mail">
-                        <img src="img/mail_icone.svg" alt="icone de profil">
+                        <img src="img/mail_icone.svg" alt="icone de profil" draggable="false">
                     </div>
                     <p>Me Contacter</p>
                 </div>
@@ -89,22 +89,22 @@
                     </div>
                     <div id="les_langues_de_code">
                         <div class="bulle_interieure bulle_texte exemple_langues bulle_grise">
-                            <img class="image_code" src="img/html5_logo.png" alt="html5_logo">
+                            <img class="image_code" src="img/html5_logo.png" alt="html5_logo" draggable="false">
                         </div>
                         <div class="bulle_interieure bulle_texte exemple_langues bulle_grise">
-                            <img class="image_code" src="img/css3.png" alt="css3">
+                            <img class="image_code" src="img/css3.png" alt="css3" draggable="false">
                         </div>
                         <div class="bulle_interieure bulle_texte exemple_langues bulle_grise">
-                            <img class="image_code" src="img/js.png" alt="javascript_logo">
+                            <img class="image_code" src="img/js.png" alt="javascript_logo" draggable="false">
                         </div>
                         <div class="bulle_interieure bulle_texte exemple_langues bulle_grise">
-                            <img class="image_code" src="img/c_logo.png" alt="c_logo">
+                            <img class="image_code" src="img/c_logo.png" alt="c_logo" draggable="false">
                         </div>
                         <div class="bulle_interieure bulle_texte exemple_langues bulle_grise">
-                            <img class="image_code" src="img/python_logo.svg" alt="python">
+                            <img class="image_code" src="img/python_logo.svg" alt="python" draggable="false">
                         </div>
                         <div class="bulle_interieure bulle_texte exemple_langues bulle_grise">
-                            <img class="image_code_grand" src="img/sql.png" alt="sql_logo">
+                            <img class="image_code_grand" src="img/sql.png" alt="sql_logo" draggable="false">
                         </div>
                     </div>
                 </div>
@@ -115,21 +115,45 @@
                         </div>
                         <div class="bulle_interieure bulle_texte bulle_orange" id="piano">
                             <div class="bulle_piano" id="piano_screen_1">
-                                <img class="image_piano" src="img/piano_screen_1.png" alt="html5_logo">
+                                <img class="image_piano" src="img/piano_screen_1.png" alt="image projet piano mode jour" draggable="false">
                             </div>
                             <div id="separateur">
                             </div>
                             <div class="bulle_piano" id="piano_screen_2">
-                                <img class="image_piano" id="image_piano_2" src="img/piano_screen_2.png" alt="html5_logo">
+                                <img class="image_piano" id="image_piano_2" src="img/piano_screen_2.png" alt="image projet piano mode nuit" draggable="false">
                             </div>
                         </div>
+                    </div>
+                    <div id="place_matrix">
+                        <div class="bulle_interieure bulle_vert">
+                            <div id="bulle_matrix">
+                                <img id="matrix" src="/img/martix.png" alt="image projet matrix">
+                            </div>
+                        </div>
+                        <div class="bulle_interieure bulle_texte bulle_vert">
+                            <p>Un effet "Matrix" dans le terminal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="style_affichage animate_off" id="a_propos">
+                    <div class="bulle_interieure bulle_texte">
+                        <p>A propos de moi :</p>
+                    </div>
+                    <div class="bulle_interieure bulle_texte">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rutrum pellentesque accumsan. Ut suscipit efficitur ornare. Etiam quam metus, efficitur nec ante sed, eleifend dignissim purus. Aliquam condimentum elit eget libero ornare fringilla. Sed at metus rutrum, vulputate ante at, rhoncus est.</p>
+                    </div>
+                    <div class="bulle_interieure bulle_texte bulle_multicolor_red">
+                        <p>Vivamus rutrum eget lorem sed varius. Nam laoreet turpis eu tincidunt hendrerit. Nullam at dignissim nunc. Nullam et pharetra sem, id interdum nisi. Donec finibus justo sit amet ultricies aliquet. Nulla efficitur erat at cursus vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
+                    </div>
+                    <div class="bulle_interieure bulle_texte">
+                        <p>Praesent risus lacus, tempor eu justo id, finibus ultricies ligula. Aenean ac odio lobortis, rutrum velit at, hendrerit felis. Fusce eu feugiat nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus ex felis, a semper tortor efficitur eget. Sed posuere fringilla tristique. Phasellus purus orci, laoreet ac tincidunt non, sodales id nibh.</p>
                     </div>
                 </div>
             </section>
         </section>
     </main>
     <footer>
-
+        <p>Lucas COELHO</p>
     </footer>
 </body>
 
