@@ -196,8 +196,19 @@ header {
     /* les couleurs sont en hex pour etre plus simple a changer, niveau opacité*/
     --red_multi_1: #ff00005b;
     --red_multi_2: #ffee005b;
-    --red_multi_3: #d400ff5b;
     animation: truc_machin_anim_couleur_de_fou_red 4s linear infinite forwards;
+}
+.bulle_multicolor_blue {
+    /* les couleurs sont en hex pour etre plus simple a changer, niveau opacité*/
+    --blue_multi_1: #00c8ff5b;
+    --blue_multi_2: #0059ff5b;
+    animation: truc_machin_anim_couleur_de_fou_blue 4s linear infinite forwards;
+}
+.bulle_multicolor_green {
+    /* les couleurs sont en hex pour etre plus simple a changer, niveau opacité*/
+    --green_multi_1: #b7ff005b;
+    --green_multi_2: #00ff845b;
+    animation: truc_machin_anim_couleur_de_fou_green 4s linear infinite forwards;
 }
 
 #message_start {
@@ -396,22 +407,54 @@ footer {
         background-color: var(--red_multi_1);
     }
 
-    33% {
+    50% {
         border-color: var(--red_multi_2);
         box-shadow: 0 0 20px var(--red_multi_2);
         background-color: var(--red_multi_2);
-    }
-
-    66% {
-        border-color: var(--red_multi_3);
-        box-shadow: 0 0 20px var(--red_multi_3);
-        background-color: var(--red_multi_3);
     }
 
     100% {
         border-color: var(--red_multi_1);
         box-shadow: 0 0 20px var(--red_multi_1);
         background-color: var(--red_multi_1);
+    }
+}
+@keyframes truc_machin_anim_couleur_de_fou_blue {
+    0% {
+        border-color: var(--blue_multi_1);
+        box-shadow: 0 0 20px var(--blue_multi_1);
+        background-color: var(--blue_multi_1);
+    }
+
+    50% {
+        border-color: var(--blue_multi_2);
+        box-shadow: 0 0 20px var(--blue_multi_2);
+        background-color: var(--blue_multi_2);
+    }
+
+    100% {
+        border-color: var(--blue_multi_1);
+        box-shadow: 0 0 20px var(--blue_multi_1);
+        background-color: var(--blue_multi_1);
+    }
+}
+@keyframes truc_machin_anim_couleur_de_fou_green {
+    0% {
+        border-color: var(--green_multi_1);
+        box-shadow: 0 0 20px var(--green_multi_1);
+        background-color: var(--green_multi_1);
+    }
+
+    50% {
+        border-color: var(--green_multi_2);
+        box-shadow: 0 0 20px var(--green_multi_2);
+        background-color: var(--green_multi_2);
+    }
+
+    100% {
+        border-color: var(--green_multi_1);
+        box-shadow: 0 0 20px var(--green_multi_1);
+        background-color: var(--green_multi_1);
     }
 }
 
