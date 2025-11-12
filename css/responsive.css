@@ -1,69 +1,90 @@
 @media all and (min-width:769px) {
-    #max_768{
+    #max_768 {
         display: none;
     }
 }
+
+@media all and (max-width:1025px) {
+    #a_propos {
+        overflow-y: scroll;
+    }
+}
+
 @media all and (max-width:768px) {
-    .flex{
+    .flex {
         flex-direction: column;
     }
-    .flex aside{
+
+    .flex aside {
         flex-direction: row;
         width: 100%;
         height: 100%;
         justify-content: center;
         margin: auto;
     }
-    #affichage{
+
+    #affichage {
         width: 90%;
         margin: 5%;
     }
-    #min_768{
+
+    #min_768 {
         display: none;
     }
-    #max_768 hr{
+
+    #max_768 hr {
         width: 50%;
     }
-    #max_768{
+
+    #max_768 {
         text-align: center;
     }
 }
+
 @media all and (max-width:426px) {
-    .app{
-        font-size:small ;
+    .app {
+        font-size: small;
     }
-    .flex aside{
+
+    .flex aside {
         margin-top: 5%;
         margin-bottom: 5%;
     }
-    .piano{
+
+    .piano {
         flex-direction: column;
     }
-    #piano{
+
+    #piano {
         width: 94%;
     }
-    #projets{
+
+    #projets {
         height: 94%;
         gap: 2%;
     }
-    #affichage{
+
+    #affichage {
         height: 700px;
     }
-    #place_matrix{
+
+    #place_matrix {
         flex-direction: column;
     }
-    #matrix{
+
+    #matrix {
         height: calc(var(--height_aff) * 0.94 / 2 - 50px);
     }
 }
 
-@media all and  (max-width:376px){
-    #matrix{
+@media all and (max-width:376px) {
+    #matrix {
         height: calc(var(--height_aff) * 0.94 / 2 - 70px);
     }
 }
-@media all and  (max-width:321px){
-    #matrix{
+
+@media all and (max-width:321px) {
+    #matrix {
         height: calc(var(--height_aff) * 0.94 / 2 - 90px);
     }
 }

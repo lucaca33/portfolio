@@ -193,18 +193,24 @@ header {
 }
 
 .bulle_multicolor_red {
+    display: flex;
+    align-items: center;
     /* les couleurs sont en hex pour etre plus simple a changer, niveau opacité*/
     --red_multi_1: #ff00005b;
     --red_multi_2: #ffee005b;
     animation: truc_machin_anim_couleur_de_fou_red 4s linear infinite forwards;
 }
 .bulle_multicolor_blue {
+    display: flex;
+    align-items: center;
     /* les couleurs sont en hex pour etre plus simple a changer, niveau opacité*/
     --blue_multi_1: #00c8ff5b;
     --blue_multi_2: #0059ff5b;
     animation: truc_machin_anim_couleur_de_fou_blue 4s linear infinite forwards;
 }
 .bulle_multicolor_green {
+    display: flex;
+    align-items: center;
     /* les couleurs sont en hex pour etre plus simple a changer, niveau opacité*/
     --green_multi_1: #b7ff005b;
     --green_multi_2: #00ff845b;
@@ -370,7 +376,9 @@ header {
     height: 90%; /*a cause des ~10% de margin, comme toujours*/
     align-items: center;
 }
-
+h1{
+    text-align: center;
+}
 /******************************footer******************************/
 
 footer {
