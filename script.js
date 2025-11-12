@@ -24,7 +24,6 @@ function animate(to_animate) {
         af0.classList.add('animate_on');
         af0.classList.remove('animate_off');
     } else { // Sinon : on éteint tout les autres et on allume celui la
-        // bug ici quelque part
         for (let i = 0; i < liste_affichage.length; i++) {
             if (liste_affichage[i] == to_animate) { // si c'est le bon on l'allume
                 void liste_affichage[i].offsetWidth;
