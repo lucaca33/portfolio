@@ -84,7 +84,9 @@ header {
 .carre {
     border-radius: 10%;
 }
-
+#icone_trop_grand{
+    margin: 0 auto;
+}
 .app {
     display: flex;
     flex-direction: column;
