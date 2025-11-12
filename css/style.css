@@ -65,7 +65,7 @@ header {
 }
 
 .flex {
-    height: calc(var(--height_aff) + 200px);
+    height: calc(var(--height_aff) + 100px);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
