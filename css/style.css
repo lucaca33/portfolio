@@ -71,13 +71,13 @@ header {
 }
 
 .flex aside {
-    height: var(--height_aff);
+    height: calc(var(--height_aff)/1.5);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 20%;
-    gap: 2% 5%;
-    margin: 2% 5%;
+    gap: 5% 5%;
+    margin: auto;
     justify-content: center;
 }
 
