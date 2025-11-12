@@ -202,7 +202,6 @@ header {
     height: 90%;
 }
 
-
 #mailAffichage {
     display: flex;
     flex-direction: column;
@@ -260,6 +259,11 @@ header {
     width: 500px;
 }
 /**********************projets ************************************/
+#projets{
+    display: flex;
+    justify-content: space-between;
+}
+
 #piano {
     display: flex;
     position: relative;
@@ -328,7 +332,6 @@ header {
 
 /*******************matrix*********************/
 #place_matrix {
-    translate: 0 -50px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -344,7 +347,7 @@ header {
 
 #matrix {
     border-radius: 10px;
-    height: calc(var(--height_aff)*0.94/2 - 10px);
+    height: calc(var(--height_aff)*0.94/2 - 30px);
     /*la moitié de l'affichage, avec de la place en + pour le style*/
 
 }
