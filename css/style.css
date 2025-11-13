@@ -59,13 +59,15 @@ header {
 }
 
 #photo_profil {
-    width: 8%;
+    width: 40%;
+    height: 40%;
     max-width: 100px;
     border-radius: 15%;
 }
 
 .flex {
-    height: calc(var(--height_aff) + 100px);
+    height: calc(var(--height_aff)+ 20%);
+    flex: 1 ;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -74,29 +76,37 @@ header {
 }
 
 .flex aside {
-    height: calc(var(--height_aff)/3);
+    height: calc(var(--height_aff)/1.2);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 20%;
+    width: 25%;
     gap: 5% 5%;
     margin: auto;
     justify-content: center;
+    align-items: center;
 }
-
 .carre {
     border-radius: 10%;
 }
 #icone_trop_grand{
     margin: 0 auto;
 }
+#min_426, #max_426{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
 .app {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 15vmin;
+    width: 40%;
     /* Utilisation de vmin pour la largeur et la hauteur */
-    height: 18vmin;
+    height: 40%;
     padding: 2%;
     color: black;
     text-align: center;
@@ -383,7 +393,6 @@ h1{
     text-align: center;
 }
 /******************************footer******************************/
-
 footer {
     display: flex;
     background-color: white;
